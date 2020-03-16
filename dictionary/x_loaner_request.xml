@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Loaner Request" max_length="40" name="x_loaner_request" sizeclass="1" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="javascript:gs.getProperty('x_loaner.default.depot');" label="Depot" max_length="40" name="depot" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Atlanta" sequence="0" value="Atlanta"/>
+                <element inactive_on_update="false" label="Chicago" sequence="1" value="Chicago"/>
+                <element inactive_on_update="false" label="London" sequence="2" value="London"/>
+                <element inactive_on_update="false" label="San Diego" sequence="3" value="San Diego"/>
+                <element inactive_on_update="false" label="Sydney" sequence="4" value="Sydney"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="javascript:gs.getProperty('x_loaner.default.item_type');" label="Item type" max_length="40" name="item_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="cmdb_ci_computer"/>
+            </choice>
+        </element>
+        <element label="Last overdue reminder" max_length="40" name="last_overdue_reminder" type="glide_date_time"/>
+        <element label="Location to be used" max_length="40" name="location_to_be_used" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Overdue count" max_length="40" name="overdue_count" type="integer"/>
+        <element label="Pickup reminder" max_length="40" name="pickup_reminder" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:gs.getUserID()" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Requested for" max_length="32" name="requested_for" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference" use_dynamic_default="true"/>
+        <element label="Return reminder" max_length="40" name="return_reminder" type="glide_date_time"/>
+    </element>
+</database>

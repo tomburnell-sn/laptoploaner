@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element defaultsort="-1" dynamic_creation_script="// default on the table level is to create a server&#13;&#10;&#13;&#10;var gr = new GlideRecord(&quot;cmdb_ci_server&quot;);&#13;&#10;gr.initialize();&#13;&#10;gr.name=value;&#13;&#10;gr.insert();" extends="cmdb" label="Élément de configuration" max_length="40" name="cmdb_ci" sizeclass="5393" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" choice_field="depot" choice_table="x_loaner_request" default="Chicago" label="Depot" max_length="40" name="x_loaner_depot" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Loaner" max_length="40" name="x_loaner_isloaner" type="boolean"/>
+    </element>
+</database>

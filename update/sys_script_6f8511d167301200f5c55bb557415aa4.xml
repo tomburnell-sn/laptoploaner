@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_loaner_request</collection>
+        <condition/>
+        <description>A series of conditional checks to trigger events as necessary</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Loaner Events</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	// Notify requester if withdrawn
+	if (current.state.changesTo(7) && gs.getUserID() != current.requested_for) {
+		gs.eventQueue('x_loaner.withdraw', current, current.number, gs.getUserDisplayName());
+	}
+	
+	// Notify assigned_to when comments are made
+	if (current.comments.changes() && gs.getUserID() != current.assigned_to) {
+		gs.eventQueue('x_loaner.assigned_to.comments', current, current.number, gs.getUserDisplayName());
+	}
+	
+	// Notify assigned to when assigned_to changes
+	if (current.assigned_to.changes() && gs.getUserID() != current.assigned_to) {
+		gs.eventQueue('x_loaner.assigned_to.change', current, current.number, gs.getUserDisplayName());
+	}
+	
+	// Notify requested_for when comments are made
+	if (current.comments.changes() && gs.getUserID() != current.requested_for) {
+		gs.eventQueue('x_loaner.requested_for.comments', current, current.number, gs.getUserDisplayName());
+	}
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-05 23:55:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f8511d167301200f5c55bb557415aa4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Loaner Events</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_script_6f8511d167301200f5c55bb557415aa4</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-07 23:35:09</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f8511d167301200f5c55bb557415aa4"/>
+</record_update>

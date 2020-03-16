@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_status_of_content">
+    <gsw_status_of_content action="INSERT_OR_UPDATE">
+        <best_practice_allowed_ever/>
+        <checksum/>
+        <content display_value="Add Items">d3345c606732120083f45bb557415a38</content>
+        <effective_weight>1</effective_weight>
+        <more_info_visited>false</more_info_visited>
+        <previous_status/>
+        <progress>0</progress>
+        <related_log_entry display_value="2019-04-16 12:45:50">2c06cf5e1b30f340e8c2993d1d4bcbde</related_log_entry>
+        <status>1</status>
+        <sys_class_name>gsw_status_of_content</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-08-04 20:14:48</sys_created_on>
+        <sys_id>68845c2167012200ca735bb557415adf</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_status_of_content_68845c2167012200ca735bb557415adf</sys_update_name>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-16 11:45:50</sys_updated_on>
+    </gsw_status_of_content>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>work_end</element>
+        <name>x_loaner_request</name>
+        <style>background-color:Tomato</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-06 23:43:13</sys_created_on>
+        <sys_id>c8cc92e567301200f5c55bb557415a61</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_loaner_request</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_ui_style_c8cc92e567301200f5c55bb557415a61</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-15 12:27:24</sys_updated_on>
+        <value>javascript:current.work_end &lt; gs.daysAgo(0) &amp;&amp; current.state==17</value>
+    </sys_ui_style>
+    <sys_translated_text action="delete_multiple" query="documentkey=c8cc92e567301200f5c55bb557415a61"/>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_msg">
+    <sys_push_notif_msg action="DELETE">
+        <message_string>You have a pending approval for ${sysapproval}</message_string>
+        <name>Loan Approval assigned to me</name>
+        <push_app display_value="ServiceNow Mobile Application">05ed2fb177002300258da2e2c81061c2</push_app>
+        <push_message_content display_value="Approval assigned to me">69fcb1f8536123009eccddeeff7b12c0</push_message_content>
+        <subject/>
+        <sys_class_name>sys_push_notif_msg</sys_class_name>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-04-22 22:53:12</sys_created_on>
+        <sys_id>3e481ce0db0df300253852f8f4961900</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Loan Approval assigned to me</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_push_notif_msg_3e481ce0db0df300253852f8f4961900</sys_update_name>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-22 22:53:20</sys_updated_on>
+        <table>sysapproval_approver</table>
+        <type>push</type>
+    </sys_push_notif_msg>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</application>
+        <file_path/>
+        <instance_id>6e8c95dbdb2d2f006578f22ebf961906</instance_id>
+        <instance_name>platformemea</instance_name>
+        <name>sys_push_notif_msg_3e481ce0db0df300253852f8f4961900</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_msg"><sys_push_notif_msg action="INSERT_OR_UPDATE"><message_string>You have a pending approval for ${sysapproval}</message_string><name>Loan Approval assigned to me</name><push_app display_value="ServiceNow Mobile Application">05ed2fb177002300258da2e2c81061c2</push_app><push_message_content display_value="Approval assigned to me">69fcb1f8536123009eccddeeff7b12c0</push_message_content><subject/><sys_class_name>sys_push_notif_msg</sys_class_name><sys_created_by>arnoud.kooi</sys_created_by><sys_created_on>2019-04-22 22:53:12</sys_created_on><sys_id>3e481ce0db0df300253852f8f4961900</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Loan Approval assigned to me</sys_name><sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package><sys_policy/><sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope><sys_update_name>sys_push_notif_msg_3e481ce0db0df300253852f8f4961900</sys_update_name><sys_updated_by>arnoud.kooi</sys_updated_by><sys_updated_on>2019-04-22 22:53:20</sys_updated_on><table>sysapproval_approver</table><type>push</type></sys_push_notif_msg></record_update>]]></payload>
+        <payload_hash>-894644681</payload_hash>
+        <record_name>Loan Approval assigned to me</record_name>
+        <reverted_from/>
+        <source>2c65cf1e1b30f340e8c2993d1d4bcb29</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-04-22 22:53:20</sys_created_on>
+        <sys_id>745858e0db0df300253852f8f49619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16a4740f5520000001</sys_recorded_at>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-22 22:53:20</sys_updated_on>
+        <type>Push Notification Message</type>
+        <update_guid>fc5858e0bf0df3008f2e480ec8a655af</update_guid>
+        <update_guid_history>fc5858e0bf0df3008f2e480ec8a655af:-894644681,32481ce0980df3005a11b0554a2f6602:-702511985</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-04-22 22:55:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_push_notif_msg">sys_push_notif_msg</sys_db_object>
+        <sys_id>828e37b06c4b4c10936448e9eb3a2900</sys_id>
+        <sys_metadata>3e481ce0db0df300253852f8f4961900</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Loan Approval assigned to me</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_scope_delete display_value="">001f7616584b467c9b39648084b91c90</sys_scope_delete>
+        <sys_update_name>sys_push_notif_msg_3e481ce0db0df300253852f8f4961900</sys_update_name>
+        <sys_update_version display_value="sys_push_notif_msg_3e481ce0db0df300253852f8f4961900">745858e0db0df300253852f8f49619b0</sys_update_version>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-22 22:55:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

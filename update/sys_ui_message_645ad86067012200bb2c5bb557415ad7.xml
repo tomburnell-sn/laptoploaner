@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>loaner_request_form_main_section_header</key>
+        <language>en</language>
+        <message>The loaner request form is used to manage a request for a resource at a given location (e.g. a laptop from New York) for a given period of time. The process flow at the top describes the linear process to reserve, prepare, use, and return a resource. When a CI is defined in the Request state, the form automatically advances to Reserved state.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-08-01 18:06:37</sys_created_on>
+        <sys_id>645ad86067012200bb2c5bb557415ad7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>loaner_request_form_main_section_header</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_ui_message_645ad86067012200bb2c5bb557415ad7</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-01 18:06:37</sys_updated_on>
+    </sys_ui_message>
+</record_update>

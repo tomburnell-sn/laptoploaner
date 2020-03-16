@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="8bb6462567301200f5c55bb557415a23" sys_domain="global" table="x_loaner_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4fb6462567301200f5c55bb557415a23</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_loaner_request" name="x_loaner_request" sys_domain="global" view="Default view">8bb6462567301200f5c55bb557415a23</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_loaner_request" sys_domain="global" view="Default view">12548ee167301200f5c55bb557415a79</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-04-25 22:18:00</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-02-25 20:13:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>183c4f6167311200f5c55bb557415a99</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_loaner_request" name="x_loaner_request" sys_domain="global" view="Default view">8bb6462567301200f5c55bb557415a23</sys_ui_form>
+            <sys_ui_section caption="Reminders" display_value="Reminders" name="x_loaner_request" sys_domain="global" view="Default view">103c4f6167311200f5c55bb557415a97</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-02-25 20:13:17</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03b6462567301200f5c55bb557415a24</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_loaner_request" name="x_loaner_request" sys_domain="global" view="Default view">8bb6462567301200f5c55bb557415a23</sys_ui_form>
+            <sys_ui_section caption="Log" display_value="Log" name="x_loaner_request" sys_domain="global" view="Default view">87b6462567301200f5c55bb557415a23</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-02-25 20:13:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a83c4f6167311200f5c55bb557415a99</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_loaner_request" name="x_loaner_request" sys_domain="global" view="Default view">8bb6462567301200f5c55bb557415a23</sys_ui_form>
+            <sys_ui_section caption="Stats" display_value="Stats" name="x_loaner_request" sys_domain="global" view="Default view">903c4f6167311200f5c55bb557415a97</sys_ui_section>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-02-25 20:13:17</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_loaner_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8bb6462567301200f5c55bb557415a23</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>x_loaner_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+            <sys_update_name>sys_ui_form_sections_8bb6462567301200f5c55bb557415a23</sys_update_name>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-08-01 18:37:20</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

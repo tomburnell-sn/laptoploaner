@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>loaner_request_form_log_section_header</key>
+        <language>en</language>
+        <message>This section tracks the history of the request. The requester, and users with the loaner role can add comments. Several notifications are triggered by making comments.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-08-01 18:07:07</sys_created_on>
+        <sys_id>9e7a1c6067012200bb2c5bb557415a3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>loaner_request_form_log_section_header</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_ui_message_9e7a1c6067012200bb2c5bb557415a3e</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-01 18:07:07</sys_updated_on>
+    </sys_ui_message>
+</record_update>

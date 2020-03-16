@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2019-04-16 11:44:23</change_date>
+        <changed_by display_value="Arnoud Kooi">7025399bdba92300a63a30d8689619cf</changed_by>
+        <content display_value="Depots">584a88206732120083f45bb557415a95</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-04-16 11:44:23</sys_created_on>
+        <sys_id>43a58b5e1b30f340e8c2993d1d4bcb9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2019-04-16 11:44:23</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_change_log_43a58b5e1b30f340e8c2993d1d4bcb9f</sys_update_name>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-16 11:44:23</sys_updated_on>
+        <type>1</type>
+    </gsw_change_log>
+</record_update>

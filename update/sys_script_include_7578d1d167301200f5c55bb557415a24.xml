@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_loaner.loanerCIRefQual</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Advanced reference qualifier for the loaner request system</description>
+        <name>loanerCIRefQual</name>
+        <script><![CDATA[/*   This is an advanced qualifier function for the cmdb_ci field
+ *   To use it, add the following line to the CI ref qualifier
+ *	javascript:loanerCIRefQual()
+ */
+
+function loanerCIRefQual() {
+	
+	var answer;
+	var lu = new x_loaner.LoanerUtils();
+	var depot = current.getValue('depot');
+	var item_type = current.item_type;
+	
+	answer = 'sys_idIN' + lu.availableCis(item_type, depot, current.work_start, current.work_end);
+	
+	return answer;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-06 00:08:46</sys_created_on>
+        <sys_id>7578d1d167301200f5c55bb557415a24</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>loanerCIRefQual</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_script_include_7578d1d167301200f5c55bb557415a24</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-07 11:43:28</sys_updated_on>
+    </sys_script_include>
+</record_update>

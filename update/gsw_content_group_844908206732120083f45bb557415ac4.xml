@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_group">
+    <gsw_content_group action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <checksum/>
+        <child_can_have_roles>false</child_can_have_roles>
+        <children_layout>1</children_layout>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description><![CDATA[<p>Identify and configure the various types of items to include in your loaner request system (e.g. laptops, mobile phones, projectors, etc.)</p>]]></description>
+        <display_child_max_num/>
+        <done_status_text/>
+        <hide_getting_started>false</hide_getting_started>
+        <icon/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_root_content>false</is_root_content>
+        <order>200</order>
+        <parent display_value="Loaner Request Guided Setup">19d063d06732120083f45bb557415a5d</parent>
+        <parents>19d063d06732120083f45bb557415a5d</parents>
+        <progress_text/>
+        <roles/>
+        <root_intro_frame_link/>
+        <root_parent display_value="Loaner Request Guided Setup">19d063d06732120083f45bb557415a5d</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>true</supports_child_content>
+        <sys_class_name>gsw_content_group</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 20:31:54</sys_created_on>
+        <sys_id>844908206732120083f45bb557415ac4</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Configure Item Types</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_content_group_844908206732120083f45bb557415ac4</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-26 19:37:33</sys_updated_on>
+        <title>Configure Item Types</title>
+        <weight>1</weight>
+    </gsw_content_group>
+    <sys_translated_text action="delete_multiple" query="documentkey=844908206732120083f45bb557415ac4"/>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes/>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>icon</file_name>
+        <hash/>
+        <image_height/>
+        <image_width/>
+        <size_bytes>2163</size_bytes>
+        <size_compressed>1924</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 20:33:48</sys_created_on>
+        <sys_id>ed0a48206732120083f45bb557415a1e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2019-04-16 11:11:38</sys_updated_on>
+        <table_name>ZZ_YYgsw_content_group</table_name>
+        <table_sys_id>844908206732120083f45bb557415ac4</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="icon" sys_id="ed0a48206732120083f45bb557415a1e">ed0a48206732120083f45bb557415a1e</sys_attachment>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 20:33:48</sys_created_on>
+        <sys_id>210a48206732120083f45bb557415a1f</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2552</length>
+        <position>1</position>
+        <sys_attachment display_value="icon" sys_id="ed0a48206732120083f45bb557415a1e">ed0a48206732120083f45bb557415a1e</sys_attachment>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 20:33:48</sys_created_on>
+        <sys_id>610a48206732120083f45bb557415a1f</sys_id>
+    </sys_attachment_doc>
+</record_update>

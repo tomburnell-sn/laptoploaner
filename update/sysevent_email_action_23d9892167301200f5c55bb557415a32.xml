@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category/>
+        <collection>x_loaner_request</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description>Let the requester know their item is due back soon.</description>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html/>
+        <digest_separator_text/>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_loaner.return</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>${requested_for},</p>
+<p>This is a reminder to let you know that your reservation for a ${item_type} (${cmdb_ci}) is due back at ${work_end}.</p>
+<p><strong><u>Details:</u></strong></p>
+<table border="0">
+<tbody>
+<tr>
+<td><strong>Request</strong></td>
+<td>&nbsp;</td>
+<td>${number} ${URI}</td>
+</tr>
+<tr>
+<td><strong>Item</strong></td>
+<td>&nbsp;</td>
+<td>${item_type}</td>
+</tr>
+<tr>
+<td><strong>Start Date</strong></td>
+<td>&nbsp;</td>
+<td>${work_start}</td>
+</tr>
+<tr>
+<td><strong>End Date</strong></td>
+<td>&nbsp;</td>
+<td>${work_end}</td>
+</tr>
+<tr>
+<td><strong>Depot</strong></td>
+<td>&nbsp;</td>
+<td>${depot}</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>If you need to extend the reservation, please contact the Service Desk immediately</strong>&nbsp;so they can make alternate arrangements for anyone else who may have reserved the same item.</p>
+<p>Your cooperation is appreciated.</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Loaner Item Return</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>requested_for</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>false</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Your loaner ${item_type} is due back</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-06 17:41:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>23d9892167301200f5c55bb557415a32</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Loaner Item Return</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sysevent_email_action_23d9892167301200f5c55bb557415a32</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-07 17:24:02</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

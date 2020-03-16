@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>Use this list of choices to configure which table(s) in the CMDB are used to identify potential loaner assets. For example, &#34;Laptops&#34; has a value of &#34;cmdb_ci_computer&#34;. You may need to extend the CMDB to facilitate asset types that are not provided with a baseline ServiceNow configuration. For example, a new table called u_cmdb_ci_mobile_phone to store loaner phones. Standalone tables are not supported.</p>
+<p>As you add/remove/change entries in the sys_choice table, modules in the Loaner Request&gt; Items menu are being updated accordingly. Verify these in the next step of Guided Setup.</p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/sys_choice_list.do?sysparm_query=nameINjavascript:getTableExtensions('x_loaner_request')%5Eelement%3Ditem_type&amp;sysparm_list_mode=grid</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>100</order>
+        <parent display_value="Configure Item Types">844908206732120083f45bb557415ac4</parent>
+        <parents>844908206732120083f45bb557415ac4,19d063d06732120083f45bb557415a5d</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="Loaner Request Guided Setup">19d063d06732120083f45bb557415a5d</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 21:00:33</sys_created_on>
+        <sys_id>5e7f44606732120083f45bb557415a3f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Configure Item Type Choices</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_content_information_5e7f44606732120083f45bb557415a3f</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-04 20:08:26</sys_updated_on>
+        <table/>
+        <title>Configure Item Type Choices</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=5e7f44606732120083f45bb557415a3f"/>
+</record_update>

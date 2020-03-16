@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description>Triggers an email to the requester when a loaner request has been withdrawn/cancelled</description>
+        <event_name>x_loaner.withdraw</event_name>
+        <fired_by>BR: Loaner Events</fired_by>
+        <queue/>
+        <suffix>withdraw</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-05 23:51:21</sys_created_on>
+        <sys_id>9905dd9167301200f5c55bb557415ab7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_loaner.withdraw</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sysevent_register_9905dd9167301200f5c55bb557415ab7</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-05 23:51:21</sys_updated_on>
+        <table>x_loaner_request</table>
+    </sysevent_register>
+</record_update>

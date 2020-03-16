@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Create the initial formatter properties for the loaner request and loaner task forms
+Update sys_app_module to allow create/update access for automated module maintenance</description>
+        <flush_cache>false</flush_cache>
+        <name>Loaner Request Post Install</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var propList = [
+	{
+	 'suffix' : null,
+	 'name' : 'glide.ui.x_loaner_task_activity.fields',
+	 'description' : 'Activity formatter fields for loaner task form',
+	 'type' : 'string',
+	 'value' : 'assigned_to,state,opened_by,work_notes,comments,*Attachments*'
+	},
+	{
+	 'suffix' : null,
+	 'name' : 'glide.ui.x_loaner_request_activity.fields',
+	 'description' : 'Activity formatter fields for loaner request form',
+	 'type' : 'string',
+	 'value' : 'assigned_to,cmdb_ci,state,work_notes,comments,*Attachments*,assignment_group,*Email*,depot,item_type,work_end,work_start'
+	 }
+];
+
+for (var i = 0; i < propList.length; i++) {
+	var p = new GlideRecord('sys_properties');
+	p.newRecord();
+	p.setsuffix   = propList[i].suffix;
+	p.name        = propList[i].name;
+	p.description = propList[i].description;
+	p.type        = propList[i].type;
+	p.value       = propList[i].value;
+	p.insert();
+}
+
+/*********** UPDATE sys_app_module *************/
+
+var mod = new GlideRecord('sys_db_object');
+if (mod.get('name', 'sys_app_module')) {
+	mod.create_access = true;
+	mod.update_access = true;
+	mod.update();
+}
+
+/*********** OMIT EDIT AND NEW BUTTON ON APPROVERS **********/
+var rl = new GlideRecord('sys_ui_list_control');
+rl.newRecord();
+rl.name = 'x_loaner_request';
+rl.label = 'Approvers';
+rl.related_list = 'sysapproval_approver.sysapproval';
+rl.omit_edit_button = true;
+rl.omit_new_button = true;
+rl.insert();
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-03-30 23:11:43</sys_created_on>
+        <sys_id>48fa762067221200f5c55bb557415a07</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Loaner Request Post Install</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_script_fix_48fa762067221200f5c55bb557415a07</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-15 12:35:34</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

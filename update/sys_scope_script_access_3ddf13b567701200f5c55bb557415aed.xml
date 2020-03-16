@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_script_access">
+    <sys_scope_script_access action="INSERT_OR_UPDATE">
+        <example_stack_trace>Default-thread-4
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.getCurrentStackTrace(ScopeAccessProvider.java:231)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.record(ScopeAccessProvider.java:200)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.access$100(ScopeAccessProvider.java:80)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider.recordAccess(ScopeAccessProvider.java:63)
+	com.glide.sys.fencing.dependency.ScopeAccessRecorder.record(ScopeAccessRecorder.java:13)
+	com.glide.script.system.ASystemInclude.recordCrossScopeAccess(ASystemInclude.java:123)
+	com.glide.script.system.ASystemInclude.include(ASystemInclude.java:106)
+	com.glide.script.AGlideRhinoScopeHandler.isScriptInclude(AGlideRhinoScopeHandler.java:43)
+	com.glide.script.GlideRhinoScopeHandler.found(GlideRhinoScopeHandler.java:24)
+	com.glide.script.ARhinoScope.get(ARhinoScope.java:75)
+	com.glide.script.RhinoScope.get(RhinoScope.java:51)
+	org.mozilla.javascript.ScriptableObject.getProperty(ScriptableObject.java:1478)
+	org.mozilla.javascript.Context.newObject(Context.java:1104)
+	com.glide.script.RhinoObject.&lt;init&gt;(RhinoObject.java:57)
+	com.glide.script.RhinoObject.&lt;init&gt;(RhinoObject.java:49)
+	com.glide.script.GlideRhinoObject.&lt;init&gt;(GlideRhinoObject.java:40)
+	com.glide.script.GlideRhinoHelper.jsonToObject(GlideRhinoHelper.java:229)
+	com.glide.glideobject.GlideElementNameValue.deserializeFromJSON(GlideElementNameValue.java:273)
+	com.glide.glideobject.GlideElementNameValue.changes(GlideElementNameValue.java:59)
+	com.glide.script.GlideRecordUtil.changed(GlideRecordUtil.java:124)
+	com.glide.script.GlideRecord.changes(GlideRecord.java:8843)
+	com.glide.script.GlideRecord.updateWithoutResettingOperation(GlideRecord.java:4050)
+	com.glide.script.GlideRecord.update(GlideRecord.java:4011)
+	com.glide.script.GlideRecord.update(GlideRecord.java:3930)
+	com.glideapp.workflow.model.pojos.WFExecuting.update(WFExecuting.java:131)
+	com.glideapp.workflow.queue.activity.ActivityManager.runActivity(ActivityManager.java:305)
+	com.glideapp.workflow.queue.activity.ActivityManager.runActivities(ActivityManager.java:239)
+	com.glideapp.workflow.queue.activity.ActivityManager.processCommand(ActivityManager.java:152)
+	com.glideapp.workflow.queue.command.ActiveCommandQueueDelegate.processCommand(ActiveCommandQueueDelegate.java:54)
+	com.glideapp.workflow.queue.command.CommandManager$CommandQueue.processCommand(CommandManager.java:321)
+	com.glideapp.workflow.queue.command.CommandManager.queue(CommandManager.java:131)
+	com.glideapp.workflow.WorkflowScriptAPI.jsFunction_cancel(WorkflowScriptAPI.java:271)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	java.lang.reflect.Method.invoke(Method.java:597)
+	org.mozilla.javascript.FunctionObject.doInvoke(FunctionObject.java:597)
+	org.mozilla.javascript.FunctionObject.call(FunctionObject.java:504)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c4142.call(sys_script_include.d3669766c0a8016901828e92d1202ac5:301)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c5701.call(sys_script_include.5658305167301200f5c55bb557415a24:209)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c5692.call(&lt;refname&gt;:15)
+	org.mozilla.javascript.gen.c5692.exec(&lt;refname&gt;)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:233)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:105)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:72)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:63)
+	com.glide.script.Evaluator.evaluateString(Evaluator.java:91)
+	com.glide.script.GlideRhinoHelper.evaluateAsString(GlideRhinoHelper.java:130)
+	com.glide.script.ActionScript.conditionalEval(ActionScript.java:83)
+	com.glide.script.ActionScript.execute(ActionScript.java:69)
+	com.glide.script.ActionScriptProcessor.processScript(ActionScriptProcessor.java:139)
+	com.glide.script.Action.process(Action.java:115)
+	com.glide.ui.RedirectTransaction.invokeAction(RedirectTransaction.java:421)
+	com.glide.ui.RedirectTransaction.handleActions(RedirectTransaction.java:388)
+	com.glide.ui.RedirectTransaction.inboundActions(RedirectTransaction.java:224)
+	com.glide.ui.RedirectTransaction.process(RedirectTransaction.java:93)
+	com.glide.ui.GlideServletUITransaction.process(GlideServletUITransaction.java:72)
+	com.glide.processors.AProcessor.runProcessor(AProcessor.java:404)
+	com.glide.processors.AProcessor.processTransaction(AProcessor.java:178)
+	com.glide.processors.ProcessorRegistry.process(ProcessorRegistry.java:165)
+	com.glide.ui.GlideServletTransaction.process(GlideServletTransaction.java:32)
+	com.glide.sys.ServletTransaction.run(ServletTransaction.java:34)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	java.lang.Thread.run(Thread.java:695)
+</example_stack_trace>
+        <script_name>JSON</script_name>
+        <source_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</source_scope>
+        <sys_class_name>sys_scope_script_access</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-07 23:14:50</sys_created_on>
+        <sys_id>3ddf13b567701200f5c55bb557415aed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>JSON</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_scope_script_access_3ddf13b567701200f5c55bb557415aed</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-07 23:14:50</sys_updated_on>
+        <target_scope display_value="Global">global</target_scope>
+    </sys_scope_script_access>
+</record_update>

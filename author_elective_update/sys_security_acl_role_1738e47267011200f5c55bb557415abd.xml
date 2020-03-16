@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-22 22:42:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1738e47267011200f5c55bb557415abd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_loaner_request.pickup_reminder.nobody</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_security_acl display_value="x_loaner_request.pickup_reminder">5738e47267011200f5c55bb557415abc</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1738e47267011200f5c55bb557415abd</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-22 22:42:16</sys_updated_on>
+        <sys_user_role display_value="nobody" name="nobody">b05940500a0a0aa70090a4893f6ff35d</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</application>
+        <file_path/>
+        <instance_id>6e8c95dbdb2d2f006578f22ebf961906</instance_id>
+        <instance_name>platformemea</instance_name>
+        <name>sys_security_acl_role_1738e47267011200f5c55bb557415abd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2016-01-22 22:42:16</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>1738e47267011200f5c55bb557415abd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_loaner_request.pickup_reminder.nobody</sys_name><sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope><sys_security_acl display_value="x_loaner_request.pickup_reminder">5738e47267011200f5c55bb557415abc</sys_security_acl><sys_update_name>sys_security_acl_role_1738e47267011200f5c55bb557415abd</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2016-01-22 22:42:16</sys_updated_on><sys_user_role display_value="nobody" name="nobody">b05940500a0a0aa70090a4893f6ff35d</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1182729560</payload_hash>
+        <record_name>x_loaner_request.pickup_reminder.nobody</record_name>
+        <reverted_from/>
+        <source>e0ff6e161bfcb340e8c2993d1d4bcbcf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-04-16 10:13:15</sys_created_on>
+        <sys_id>18d0f25e1bfcb340e8c2993d1d4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16a25a2eaab0000001</sys_recorded_at>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-16 10:13:15</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>d4d0f25e62fcb340ff48119f06c54c2a</update_guid>
+        <update_guid_history>d4d0f25e62fcb340ff48119f06c54c2a:1182729560</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_loaner_request.pickup_reminder.nobody">7f161ad8db018450253852f8f49619f1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-11-07 09:35:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>4b3ed27700d44058ab1ddd6e8c38a244</sys_id>
+        <sys_metadata>1738e47267011200f5c55bb557415abd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_loaner_request.pickup_reminder.nobody</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_scope_delete display_value="">001f7616584b467c9b39648084b91c90</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_1738e47267011200f5c55bb557415abd</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_1738e47267011200f5c55bb557415abd">18d0f25e1bfcb340e8c2993d1d4bcb2a</sys_update_version>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-11-07 09:35:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

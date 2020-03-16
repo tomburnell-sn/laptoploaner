@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_status_of_content">
+    <gsw_status_of_content action="INSERT_OR_UPDATE">
+        <best_practice_allowed_ever/>
+        <checksum>2XZkYdk02oNH+ruXkOSA5M8JhW4=</checksum>
+        <content display_value="Loaner Request Guided Setup">19d063d06732120083f45bb557415a5d</content>
+        <effective_weight>1</effective_weight>
+        <more_info_visited>false</more_info_visited>
+        <previous_status/>
+        <progress>83.3333333</progress>
+        <related_log_entry display_value="2020-03-16 11:04:06">1709c8921b2f84105118b88cdc4bcbb4</related_log_entry>
+        <status>1</status>
+        <sys_class_name>gsw_status_of_content</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-25 22:25:16</sys_created_on>
+        <sys_id>36c96c4167031200ca735bb557415aff</sys_id>
+        <sys_mod_count>211</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_status_of_content_36c96c4167031200ca735bb557415aff</sys_update_name>
+        <sys_updated_by>Tom.Burnell</sys_updated_by>
+        <sys_updated_on>2020-03-16 11:04:06</sys_updated_on>
+    </gsw_status_of_content>
+</record_update>

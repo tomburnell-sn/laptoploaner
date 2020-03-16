@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>Add/remove/update the modules under the <strong>Items</strong> separator to represent the different types of assets available. These modules facilitate loaner asset management in the Loaner Request&gt; Loaner Items application menu.</p>
+<p>Use the following configuration as an example:</p>
+<p>Title: <strong>Laptops</strong><br />Application menu: <strong>Loaner Request</strong><br />Order: <strong>2,100</strong><br />Link Type: <strong>List of Records</strong><br />Table: <strong>Computer [cmdb_ci_computer]</strong><br />Filter: <strong>Loaner | is | true</strong></p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/sys_app_application.do?sys_id=f8e4341167301200f5c55bb557415a78</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>300</order>
+        <parent display_value="Configure Item Types">844908206732120083f45bb557415ac4</parent>
+        <parents>844908206732120083f45bb557415ac4,19d063d06732120083f45bb557415a5d</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="Loaner Request Guided Setup">19d063d06732120083f45bb557415a5d</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 21:03:26</sys_created_on>
+        <sys_id>bf6094606732120083f45bb557415a8e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Update Navigation Modules</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_content_information_bf6094606732120083f45bb557415a8e</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-04 20:11:17</sys_updated_on>
+        <table/>
+        <title>Update Navigation Modules</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=bf6094606732120083f45bb557415a8e"/>
+</record_update>

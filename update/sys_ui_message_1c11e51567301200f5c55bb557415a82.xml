@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>loaner_item_not_available</key>
+        <language>en</language>
+        <message>Sorry, that item is no longer available. Please select another.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-06 00:44:17</sys_created_on>
+        <sys_id>1c11e51567301200f5c55bb557415a82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>loaner_item_not_available</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_ui_message_1c11e51567301200f5c55bb557415a82</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-06 00:44:17</sys_updated_on>
+    </sys_ui_message>
+</record_update>

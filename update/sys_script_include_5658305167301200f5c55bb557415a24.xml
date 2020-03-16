@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_loaner.LoanerUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Collection of utilities to help manage the loaner request records</description>
+        <name>LoanerUtils</name>
+        <script><![CDATA[var LoanerUtils = Class.create();
+
+LoanerUtils.prototype = {
+	/**********
+ 	* Initialization stuff here...
+ 	*
+ 	**********/
+	initialize : function() {
+		this.overdueRemindTime = gs.getProperty('x_loaner.overdue.remindtime', 24);
+		this.pickupLeadTime    = gs.getProperty('x_loaner.pickup.leadtime', 24) * -1; //paramm to gs.daysAgo()
+		this.returnRemindTime  = gs.getProperty('x_loaner.return.remindtime', 24) * -1;
+		this.installStatus     = gs.getProperty('x_loaner.install_status');
+		this.checkAvailability = gs.getProperty('x_loaner.check_availability') == 'true';
+		this.defaultGroup      = gs.getProperty('x_loaner.default.assignment_group', '');
+		this.requestTable      = 'x_loaner_request';
+		this.taskTable         = 'x_loaner_task';
+		this.ciTable           = 'cmdb_ci';
+	},
+	
+	/**********
+ 	*
+ 	* getOverdueRequests - retrieve a list of overdue records
+ 	*
+ 	* @param - None
+ 	* @return: array of sys_ids
+ 	*
+ 	**********/
+	getOverdueRequests : function() {
+		
+		var a = [];
+		var gr = new GlideRecord(this.requestTable);
+		var now = new GlideDateTime().getDisplayValue();
+		
+		gr.addQuery('work_end', '<=', now);
+		gr.addQuery('state', 17);
+		gr.query();
+		
+		while (gr.next()) {
+			a.push(gr.getValue('sys_id'));
+		}
+		
+		return a;
+	},
+	
+	/**********
+ 	*
+ 	* timeToRemindOverdue - Use the passed in ID to check if the record is time to remind again
+ 	*
+ 	* @param - id: sys_id of the loaner record to check
+ 	* @return - boolean: true = time to remind
+ 	*
+ 	**********/
+	timeToRemindOverdue : function(id) {
+		
+		var gr = new GlideRecord(this.requestTable);
+		
+		if (!gr.get(id)) {
+			gs.error('LoanerUtils: timeToRemindOverdue(): FAILED TO RETRIEVE RECORD');
+			return false;
+		}
+		var baseDate = (gr.last_overdue_reminder == '') ? gr.work_end : gr.last_overdue_reminder;
+				
+		return (baseDate <= gs.hoursAgo(this.overdueRemindTime)) ? true : false;
+	},
+	
+	/**********
+ 	*
+ 	* sendOverdueReminder - Queue an event to send a reminder and update the necessary
+ 	*                       record fields to indicate they've been reminded
+ 	*
+ 	* @param - id: sys_id of the loaner record to check
+ 	* @return - None
+ 	*
+ 	**********/
+	sendOverdueReminder : function(id) {
+		
+		var gr = new GlideRecord(this.requestTable);
+		var now = new GlideDateTime().getDisplayValue();
+		
+		if (!gr.get(id)) {
+			gs.error('LoanerUtils: setLastOverdueReminder(): FAILED TO RETRIEVE RECORD');
+			return;
+		}
+		++gr.overdue_count;
+		
+		// Record the last time a reminder was sent
+		gr.last_overdue_reminder.setDisplayValue(now);
+		gr.update();
+		
+		// Send the overdue reminder
+		gs.eventQueue('x_loaner.overdue', gr, gr.work_start, gr.work_end);
+	},
+	
+	/**********
+ 	*
+ 	* getNullPickupReminders - Get a list of records in state 'Ready for Pickup'
+ 	*                          that haven't been reminded before
+ 	*
+ 	* @param - None
+ 	* @return - array of sys_ids
+ 	*
+ 	**********/
+	getNullPickupReminders : function() {
+		
+		var a = [];
+		var gr = new GlideRecord(this.requestTable);
+		
+		gr.addQuery('state', 16);
+		gr.addQuery('pickup_reminder', '');
+		gr.addQuery('work_start', '<=', gs.hoursAgo(this.pickupLeadTime));
+		gr.query();
+		
+		while (gr.next()) {
+			a.push(gr.getValue('sys_id'));
+		}
+		return a;
+	},
+	
+	/**********
+ 	*
+ 	* sendPickupReminder - Queue an event to send a reminder and update the pickup reminder field
+ 	*
+ 	* @param - id: sys_id of the loaner record to check
+ 	* @return - None
+ 	*
+ 	**********/
+	sendPickupReminder : function(id) {
+		
+		var gr = new GlideRecord(this.requestTable);
+		var now = new GlideDateTime().getDisplayValue();
+		
+		if (!gr.get(id)) {
+			gs.error('LoanerUtils: sendPickupReminder(): FAILED TO RETRIEVE RECORD');
+			return;
+		}
+		
+		// Log the time the pickup reminder was sent and avoid sending again
+		gr.pickup_reminder.setDisplayValue(now);
+		gr.update();
+		
+		// Send the pickup reminder
+		gs.eventQueue('x_loaner.pickup', gr, gr.work_start, gr.work_end);
+		return;
+	},
+	
+	/**********
+ 	*
+ 	* getNullReturnReminders - Get a list of records that need reminding to bring their item back
+ 	*
+ 	* @param - None
+ 	* @return - array of sys_ids
+ 	*
+ 	**********/
+	getNullReturnReminders : function() {
+		
+		var a =[];
+		var gr = new GlideRecord(this.requestTable);
+		
+		gr.addQuery('state', 17);
+		gr.addQuery('return_reminder', '');
+		gr.addQuery('work_end', '<=', gs.hoursAgo(this.returnRemindTime));
+		gr.query();
+		
+		while (gr.next()) {
+			a.push(gr.getValue('sys_id'));
+		}
+		return a;
+	},
+	
+	/**********
+ 	*
+ 	* setReturnReminder - Queue a return reminder and update field when reminder was sent
+ 	*
+ 	* @param - id: sys_id of the loaner record to check
+ 	* @return - None
+ 	*
+ 	**********/
+	sendReturnReminder : function(id) {
+		
+		var gr = new GlideRecord(this.requestTable);
+		var now = new GlideDateTime().getDisplayValue();
+		
+		if (!gr.get(id)) {
+			gs.error('LoanerUtils: sendReturnReminder(): FAILED TO RETRIEVE RECORD');
+			return;
+		}
+		
+		// Set this record to never remind again
+		gr.return_reminder.setDisplayValue(now);
+		gr.update();
+		
+		// Send the return reminder
+		gs.eventQueue('x_loaner.return', gr, gr.work_start, gr.work_end);
+	},
+	
+	/*********
+ 	*
+ 	* withdrawRequest - Update a request and all related bits
+ 	*                   (child tasks are handled by a standard bus. rule)
+ 	*
+ 	* @param lr - GlideRecord of the request
+ 	* @return None
+ 	*
+ 	**********/
+	withdrawRequest : function(lr) {
+		
+		var wf = new global.Workflow();
+		
+		wf.cancel(lr);
+		lr.active = false;
+		lr.state  = 7;
+		lr.update();
+		
+		gs.addInfoMessage(gs.getMessage('loaner_withdraw'));
+	},
+	
+	/*********
+ 	*
+ 	* isAvailable - check to see if there are no conflicts w/ci
+ 	*               being available between start and end times
+ 	*               and CI is "in" (loaner request state=Requested, Closed, Withdrawn)
+ 	*
+ 	* @param ci - GlideRecord or sys_id of the CI being requested
+ 	* @param start - start date-time of the requested reservation
+ 	* @param end - end date-time of the requested reservation
+ 	* @return boolean - true=no conflicts
+ 	*
+ 	**********/
+	isAvailable : function(ci, start, end) {
+		
+		var ci_id = ci;
+		var count = 0;
+		var lr    = new GlideAggregate(this.requestTable);
+		
+		// Null CI defaults to "not available"
+		if (!ci)
+			return false;
+		
+		if (ci instanceof GlideRecord)
+			ci_id = ci.sys_id;
+		
+		var myQuery = 'active=true^';
+		myQuery += 'cmdb_ci=' + ci + '^';
+		myQuery += 'work_start<' + end + '^';
+		myQuery += 'work_end>' + start + '^';
+		myQuery += 'NQ';
+		myQuery += 'active=true^';
+		myQuery += 'cmdb_ci=' + ci + '^';
+		myQuery += 'work_end<' + gs.daysAgo(0);
+		
+		lr.addAggregate('COUNT');
+		lr.addQuery(myQuery);
+		lr.query();
+		
+		if (lr.next()) {
+			count = lr.getAggregate('COUNT');
+		}
+		
+		return (count == 0);
+	},
+	
+	/**********
+ 	*
+ 	* availableCis - get a list of CIs in a class/depot that are available
+ 	*
+ 	* @param class_name - CI class
+ 	* @param depot_name - Name of the pick up location
+ 	* @param start - reservation start date
+ 	* @param end - reservation end date
+ 	* @return - comma separated list of sys_ids that are available at that time
+ 	*
+ 	**********/
+	availableCis : function(class_name, depot_name, start, end) {
+		
+		var ci                    = new GlideRecord(this.ciTable);
+		var availableItems        = [];
+		
+		if (this.installStatus) {
+			ci.addQuery('install_status', 'IN', this.installStatus);
+		}
+		ci.addQuery('x_loaner_isloaner', true);
+		ci.addQuery('sys_class_name', class_name);
+		ci.addQuery('x_loaner_depot', depot_name);
+		ci.query();
+		
+		while (ci.next()) {
+			var id = ci.getValue('sys_id');
+			
+			// Check only available matching items
+			if (this.checkAvailability) {
+				if (this.isAvailable(id, start, end))
+					availableItems.push(id);
+				
+			} else {
+				// Take any matching items
+				availableItems.push(id);
+			}
+		}
+		
+		return availableItems.join(',');
+	},
+	
+	/**********
+ 	*
+ 	* getDefaultAssignmentGroup - get the Assignment Group
+	*                    Used by the dictionary override for task.assignment_group
+ 	*
+	* @param - none
+	* @return - sys_id
+	*
+	***********/
+	getDefaultAssignmentGroup : function() {
+		
+		if (this.defaultGroup == '')
+			return;
+		
+		var gr = new GlideRecord('sys_user_group');
+		
+		if (!gr.get('name', this.defaultGroup))
+			return;
+		
+		return gr.getValue('sys_id');
+	},
+
+	
+	type: 'LoanerUtils'
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-05 21:46:52</sys_created_on>
+        <sys_id>5658305167301200f5c55bb557415a24</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>LoanerUtils</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_script_include_5658305167301200f5c55bb557415a24</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-07 22:57:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

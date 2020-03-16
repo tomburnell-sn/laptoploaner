@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_group">
+    <gsw_content_group action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <checksum/>
+        <child_can_have_roles>false</child_can_have_roles>
+        <children_layout>0</children_layout>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description><![CDATA[<p>Use this guided setup to configure the properties, notifications, and assets for the loaner request system. </p>]]></description>
+        <display_child_max_num>5</display_child_max_num>
+        <done_status_text/>
+        <hide_getting_started>false</hide_getting_started>
+        <icon/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_root_content>true</is_root_content>
+        <order>0</order>
+        <parent/>
+        <parents/>
+        <progress_text/>
+        <roles/>
+        <root_intro_frame_link>/x_loaner_guided_setup_introduction.do</root_intro_frame_link>
+        <root_parent/>
+        <skippable>false</skippable>
+        <supports_child_content>true</supports_child_content>
+        <sys_class_name>gsw_content_group</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-11 17:33:51</sys_created_on>
+        <sys_id>19d063d06732120083f45bb557415a5d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Loaner Request Guided Setup</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_content_group_19d063d06732120083f45bb557415a5d</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-11 21:17:56</sys_updated_on>
+        <title>Loaner Request Guided Setup</title>
+        <weight>1</weight>
+    </gsw_content_group>
+    <sys_translated_text action="delete_multiple" query="documentkey=19d063d06732120083f45bb557415a5d"/>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes/>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>icon</file_name>
+        <hash/>
+        <image_height/>
+        <image_width/>
+        <size_bytes>1828</size_bytes>
+        <size_compressed>1536</size_compressed>
+        <state/>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-14 01:04:51</sys_created_on>
+        <sys_id>933b93416732120088aa5bb557415a33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-14 01:04:51</sys_updated_on>
+        <table_name>ZZ_YYgsw_content_group</table_name>
+        <table_sys_id>19d063d06732120083f45bb557415a5d</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="icon" sys_id="933b93416732120088aa5bb557415a33">933b93416732120088aa5bb557415a33</sys_attachment>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-14 01:04:51</sys_created_on>
+        <sys_id>d33b93416732120088aa5bb557415a33</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2036</length>
+        <position>1</position>
+        <sys_attachment display_value="icon" sys_id="933b93416732120088aa5bb557415a33">933b93416732120088aa5bb557415a33</sys_attachment>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-14 01:04:51</sys_created_on>
+        <sys_id>173b93416732120088aa5bb557415a33</sys_id>
+    </sys_attachment_doc>
+</record_update>

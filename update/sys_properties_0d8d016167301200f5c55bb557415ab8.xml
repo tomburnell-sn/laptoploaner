@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>Database+file=db,Filesystem only=file,None=none</choices>
+        <description>Where would you like loaner request debug messages sent?</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_loaner.logging.destination</name>
+        <read_roles/>
+        <suffix>logging.destination</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-06 17:58:36</sys_created_on>
+        <sys_id>0d8d016167301200f5c55bb557415ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_loaner.logging.destination</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_properties_0d8d016167301200f5c55bb557415ab8</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-06 17:58:36</sys_updated_on>
+        <type>choicelist</type>
+        <value>file</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=0d8d016167301200f5c55bb557415ab8"/>
+</record_update>

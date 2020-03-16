@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_loaner.LoanerSetup</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Functions used to help create and maintain modules based on the item type choice list</description>
+        <name>LoanerSetup</name>
+        <script><![CDATA[var LoanerSetup = Class.create();
+LoanerSetup.prototype = {
+	initialize: function(choiceRec, displayOutput) {
+		this.appID         = 'f8e4341167301200f5c55bb557415a78';
+		this.choiceRec     = choiceRec;
+		this.modName       = choiceRec.getValue('label');
+		this.modTable      = choiceRec.getValue('value');
+		this.defaultFilter = 'x_loaner_isloaner=true^EQ';
+		this.moduleTable   = 'sys_app_module';
+		this.modList       = [];
+		this.displayOutput = displayOutput;
+	},
+		
+	/*
+ 	* insertModule - create a new module based on the sy
+ 	*
+ 	* @param - none
+ 	* @return - sys_id of the module
+ 	*
+ 	*/
+	insertModule : function() {
+		
+		var newMod = new GlideRecord(this.moduleTable);
+		
+		newMod.newRecord();
+		newMod.title       = this.modName + 's';
+		newMod.name        = this.modTable;
+		newMod.application = this.appID;
+		newMod.inactive    = false;
+		newMod.filter      = this.defaultFilter;
+		newMod.view_name   = 'Loaner';
+		newMod.order       = this._nextModuleOrder();
+		var id = newMod.insert();
+		if (this.displayOutput) {
+			var msg = gs.getMessage('loaner_module_inserted', [newMod.title]);
+			gs.addInfoMessage(msg);
+		}
+		
+		return id;
+	},
+	
+	/*
+ 	* updateModules - look for any existing modules and update the table, name, and active
+ 	*
+ 	* @param oldMod - previous choicelist info (to find old module)
+ 	* @return - N/A
+ 	*
+ 	*/
+	updateModules : function(oldMod) {
+		
+		var mod = new GlideRecord(this.moduleTable);
+		mod.addQuery('title', 'STARTSWITH', oldMod.label);
+		mod.addQuery('name', oldMod.value);
+		mod.query();
+		gs.debug(mod.getRowCount() + ' records found. title=' + oldMod.label + ' name=' + oldMod.value);
+		
+		while (mod.next()) {
+			gs.debug('old active=' + mod.active + ' new active=' + !this.choiceRec.inactive);
+			gs.debug('title=' + this.modName + ' name=' + this.modTable);
+			mod.title       = this.modName;
+			mod.name        = this.modTable;
+			mod.active      = !this.choiceRec.inactive;
+		
+			mod.update();
+			
+			gs.debug('filter=' + mod.filter + ' name=' + mod.name);
+			if (this.displayOutput) {
+				var msg = gs.getMessage('loaner_module_updated', [mod.title]);
+				gs.addInfoMessage(msg);
+			}
+		}
+		
+		return;
+	},
+	
+	/*
+ 	* moduleExists - check if at least one module exists for the given table/name
+ 	*
+	* @param - none
+ 	* @return boolean - true if at least module exists for this combination
+ 	*
+ 	*/
+	moduleExists : function() {
+		
+		var count = 0;
+		var mod = new GlideAggregate(this.moduleTable);
+		
+		mod.addQuery('title', 'STARTSWITH', this.modName);
+		mod.addQuery('name', this.modTable);
+		mod.addQuery('application', this.appID);
+		mod.addAggregate('COUNT');
+		mod.query();
+		
+		if (mod.next()) {
+			count = mod.getAggregate('COUNT');
+		}
+		
+		return count > 0;
+	},
+	
+	/*
+ 	* setLoanerModulesActive - activate all modules for the given table/name
+ 	*
+ 	* @param active - boolean to enable/disable module
+ 	* @return
+ 	*
+ 	*/
+	setModulesActive : function(active) {
+		
+		var mod = new GlideRecord(this.moduleTable);
+		
+		mod.addQuery('title', 'STARTSWITH', this.modName);
+		mod.addQuery('name', this.modTable);
+		mod.addQuery('application', this.appID);
+		mod.query();
+		gs.debug(mod.getRowCount() + ' records found');
+		
+		while (mod.next()) {
+			gs.debug('active=' + active + ' mod.active=' + mod.active);
+			if (active != mod.active) {
+				gs.debug('updated');
+				mod.active = active;
+				mod.update();
+				
+				if (this.displayOutput) {
+					var msg = gs.getMessage(active ? 'loaner_module_activated' : 'loaner_module_deactivated', [this.modName]);
+					gs.addInfoMessage(msg);
+				}
+			}
+		}
+	},
+	
+	/*
+ 	* _nextModuleOlder - find the next module # in increments of 100
+ 	*
+ 	* @param - none
+ 	* @return integer - module order number
+ 	*
+ 	*/
+	_nextModuleOrder : function() {
+		
+		var mod = new GlideRecord(this.moduleTable);
+		var retVal = 2200;
+		var max = -1;
+		
+		mod.addQuery('application', this.appID);
+		mod.addQuery('order', '>', 2000);
+		mod.addQuery('order', '<', 3000);
+		mod.query();
+		
+		while (mod.next()) {
+			var o = parseInt(mod.getValue('order'));
+			if (o > max)
+				max = o;
+		}
+		
+		// Now calculate the next number
+		if ((max % 100) != 0) {
+			retVal = (max - (max % 100)) + 100;
+			
+		} else {
+			retVal = max + 100;
+		}
+		
+		return retVal;
+		
+	},
+	
+	type: 'LoanerSetup'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-08-03 22:43:50</sys_created_on>
+        <sys_id>e9ec2f0567012200bb2c5bb557415a0a</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>LoanerSetup</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>sys_script_include_e9ec2f0567012200bb2c5bb557415a0a</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-08-04 19:51:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

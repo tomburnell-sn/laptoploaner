@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_status_of_content">
+    <gsw_status_of_content action="INSERT_OR_UPDATE">
+        <best_practice_allowed_ever/>
+        <checksum/>
+        <content display_value="Usage Locations">0bf198606732120083f45bb557415a54</content>
+        <effective_weight>1</effective_weight>
+        <more_info_visited>false</more_info_visited>
+        <previous_status>1</previous_status>
+        <progress>100</progress>
+        <related_log_entry display_value="2019-04-16 12:43:34">8b75875e1b30f340e8c2993d1d4bcbf8</related_log_entry>
+        <status>2</status>
+        <sys_class_name>gsw_status_of_content</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-25 23:13:04</sys_created_on>
+        <sys_id>07b4f40167031200ca735bb557415a84</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_status_of_content_07b4f40167031200ca735bb557415a84</sys_update_name>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-04-16 11:43:34</sys_updated_on>
+    </gsw_status_of_content>
+</record_update>

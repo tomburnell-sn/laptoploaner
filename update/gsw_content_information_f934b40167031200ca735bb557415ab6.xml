@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>In the popup window that appears, scroll down to the <strong>Related Links</strong> and click <strong>Run Fix Script.</strong></p>
+<p>This creates two properties in the global scope that define the default fields displayed in the activity formatter of the loaner request and loaner tasks tables.</p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>sys_script_fix.do?sys_id=48fa762067221200f5c55bb557415a07</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>100</order>
+        <parent display_value="Basic Setup">cfd063d06732120083f45bb557415ace</parent>
+        <parents>cfd063d06732120083f45bb557415ace,19d063d06732120083f45bb557415a5d</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="Loaner Request Guided Setup">19d063d06732120083f45bb557415a5d</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-25 23:12:06</sys_created_on>
+        <sys_id>f934b40167031200ca735bb557415ab6</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Run the Fix Script</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>gsw_content_information_f934b40167031200ca735bb557415ab6</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-26 19:40:33</sys_updated_on>
+        <table/>
+        <title>Run the Fix Script</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=f934b40167031200ca735bb557415ab6"/>
+</record_update>

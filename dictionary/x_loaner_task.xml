@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Loaner task" max_length="40" name="x_loaner_task" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Request" max_length="32" name="request" read_only="true" reference="x_loaner_request" type="reference"/>
+    </element>
+</database>

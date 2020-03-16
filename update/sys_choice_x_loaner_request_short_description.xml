@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="short_description" table="x_loaner_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue with a web page</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cbb6462567301200f5c55bb557415a24</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Issue with a web page</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue with email</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83b6462567301200f5c55bb557415a25</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Issue with email</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue with networking</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0bb6462567301200f5c55bb557415a25</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Issue with networking</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>New employee hire</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8fb6462567301200f5c55bb557415a25</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>New employee hire</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Request for a Blackberry</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>07b6462567301200f5c55bb557415a26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Request for a Blackberry</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Request for a new service</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8bb6462567301200f5c55bb557415a26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Request for a new service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Request for help</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03b6462567301200f5c55bb557415a27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Request for help</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Request for new or upgraded hardware</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>7</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>87b6462567301200f5c55bb557415a27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Request for new or upgraded hardware</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Request for new or upgraded software</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>8</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0fb6462567301200f5c55bb557415a27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Request for new or upgraded software</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>short_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Reset my password</label>
+            <language>en</language>
+            <name>x_loaner_request</name>
+            <sequence>9</sequence>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83b6462567301200f5c55bb557415a28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-01-06 22:07:02</sys_updated_on>
+            <value>Reset my password</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <name>x_loaner_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin_SHARE</sys_created_by>
+            <sys_created_on>2016-01-06 22:07:02</sys_created_on>
+            <sys_id>30c0fa1e1bfcb340e8c2993d1d4bcb41</sys_id>
+            <sys_mod_count>13</sys_mod_count>
+            <sys_name>short_description</sys_name>
+            <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+            <sys_update_name>sys_choice_x_loaner_request_short_description</sys_update_name>
+            <sys_updated_by>admin_SHARE</sys_updated_by>
+            <sys_updated_on>2016-08-01 18:37:18</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

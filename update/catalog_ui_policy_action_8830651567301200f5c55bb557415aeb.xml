@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Loaner Items">7a35b41167301200f5c55bb557415a28</catalog_item>
+        <catalog_variable>IO:70bed11567301200f5c55bb557415a50</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <order/>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-01-06 00:40:22</sys_created_on>
+        <sys_id>8830651567301200f5c55bb557415aeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>other_location</sys_name>
+        <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_8830651567301200f5c55bb557415aeb</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-01-06 00:40:22</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Show/hide other location">d1af151567301200f5c55bb557415ae6</ui_policy>
+        <variable>other_location</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+</record_update>
